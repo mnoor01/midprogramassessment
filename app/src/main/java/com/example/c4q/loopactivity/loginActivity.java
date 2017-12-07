@@ -52,6 +52,7 @@ public class loginActivity extends AppCompatActivity {
                 if(eText1.getText().toString().equalsIgnoreCase(login.getString(checkInput1,null))&& eText2.getText().toString().equals(login.getString(checkInput2,null))){
                     Toast.makeText(getApplicationContext(),"wohooo it matches",Toast.LENGTH_LONG).show();
                     Intent intent= new Intent(loginActivity.this, listActivity.class);
+                    intent.putExtra("address",eText1.getText().toString());
                     startActivity(intent);
                 }
             }
